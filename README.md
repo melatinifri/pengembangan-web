@@ -23,12 +23,12 @@
     <p><b>- Audio</b></p>
     <p> Lover - Taylor Swift</p>
     <audio controls>
-    <source src="Taylor Swift - Lover (Official Music Video).mp3"type="audio/mpeg">
+    <source src="audio.mp3"type="audio/mpeg">
     </audio>
     <p><b>- Video</b></p>
     <p> Ramadhan - Maher Zain</p>
     <video controls width="320" height="240">
-    <source src="Maher Zain - Ramadan ( Lyrics ) Official Video.mp4"type="video/mp4">
+    <source src="video.mp4"type="video/mp4">
     </video>
 
     <h2>3. Kelebihan HTML5 dan Penerapannya</h2>
