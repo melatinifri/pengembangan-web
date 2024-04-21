@@ -1,0 +1,5 @@
+body {
+    background: rgb(247,202,201);
+background: linear-gradient(90deg, rgba(247,202,201,1) 24%, rgba(145,168,208,1) 100%);
+    font-family: cambria;
+}
