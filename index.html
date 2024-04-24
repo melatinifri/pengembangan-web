@@ -10,9 +10,96 @@
         }
     </style>
     <link rel="stylesheet" href="external background.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #511f52;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #511f52;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #511f52;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
 
 </head>
 <body>
+    <header>
+        <h1>Website Perustakaan SUKA BACA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#Modul 1">Modul 1</a></li>
+                <li><a href="#Modul 2">Modul 2</a></li>
+                <li><a href="#Modul 3">Modul 3</a></li>
+                
+                <li class="dropdown">
+                    <a href="#">Modul 4</a>
+                    <div class="dropdown-content">
+                        <a href="Tabel keanggotaan.html">Tabel-Bordered</a>
+                        <a href="form n button.html">Form and Button</a>
+                    </div>
+                </li>
+                <li><a href="#">Modul 5</a></li>
+                <li><a href="biodata.html">Tentang Saya</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Selamat Datang di Website Perpustakaan SUKA BACA!</h2>
+            <img src="bg.png">      
+    </div>
+
+    <section id="Modul 1">
     <h1 style="color: #f46a8d;
                     font-family: Segoe Script;">Tugas Modul 1</h1>
     <h2>1. Daftar Berbagai Perpustakaan</h2>
@@ -47,8 +134,9 @@
         <p> - Membangun visualisasi data interaktif menggunakan elemen < canvas > atau < svg >.
         <p> - Memanfaatkan penyimpanan lokal HTML5 untuk menyimpan preferensi pengguna, riwayat pencarian, atau bahkan cache dari buku-buku yang sering diakses.
         <p> - Memungkinkan aplikasi web Perpustakaan untuk tetap dapat diakses dan digunakan oleh pengguna meskipun mereka offline, dengan memanfaatkan cache aplikasi web HTML5.</p>
+        </section>
     
-
+    <section id="Modul 2">
 <h1 style="color: #f46a8d;
                     font-family: Segoe Script;">Tugas Modul 2</h1>
         <h2>1. Formulir Keanggotan Perpustakaan</h2>
@@ -194,7 +282,8 @@
         </p>
  </fieldset>
 </body>
-
+    </section>
+<section id="Modul 3">
 <h1 style="color: #f46a8d;
                     font-family: Segoe Script;">Tugas Modul 3</h1>
 
@@ -203,6 +292,7 @@
 
 <p>HTML merupakan singkatan dari Hypertext Markup Language, yang merupakan bahasa dasar untuk membuat dan merancang halaman web. HTML digunakan untuk struktur dasar dari sebuah halaman web, menentukan bagaimana konten seperti teks, gambar, dan media lainnya akan ditampilkan dan diatur. Secara umum, HTML terdiri dari serangkaian elemen atau tag yang memberi petunjuk kepada browser tentang bagaimana halaman web harus ditampilkan.
 <p>CSS, atau Cascading Style Sheets, adalah bahasa yang digunakan untuk mengatur tampilan dan tata letak elemen-elemen HTML di dalam halaman web. Dengan CSS dapat mengatur warna, ukuran, jenis font, posisi, dan banyak lagi atribut-atribut tampilan lainnya. Misalnya, menggunakan CSS untuk membuat latar belakang transparan, membuat elemen mengambang di atas halaman, mengatur jarak antara elemen-elemen, dan mengubah tampilan saat pengguna berinteraksi dengan halaman. CSS memungkinkan untuk membuat halaman web yang lebih menarik, interaktif, dan mudah dibaca bagi pengguna.</p>
+</section>
 
 </body>
 </html>
