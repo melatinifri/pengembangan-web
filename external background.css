@@ -1,5 +1,97 @@
-body {
-    background: rgb(247,202,201);
-background: linear-gradient(90deg, rgba(247,202,201,1) 24%, rgba(145,168,208,1) 100%);
-    font-family: cambria;
-}
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f3a2be;
+            color: #444;
+            padding: 10px 20px;
+        }
+        .header-container, .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .main-navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .main-navigation ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+        .main-navigation ul li a {
+            color: #444;
+            text-decoration: none;
+        }
+        .main-navigation ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            top: 100%;
+        }
+        .main-navigation ul li:hover ul {
+            display: block;
+        }
+        .main-navigation ul li ul li {
+            margin: 0;
+        }
+        .main-navigation ul li ul li a {
+            color: #ffefef;
+        }
+        .back-button {
+            color: #fff;
+            text-decoration: none;
+            background-color: #444;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background-color: #f682ab;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f15b90;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #aca4a4;
+        }
+        .content {
+            padding: 20px;
+        }
+        .book-exhibition {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .book {
+            width: 150px;
+            text-align: center;
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+        }
+        
