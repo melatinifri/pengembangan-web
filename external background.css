@@ -1,4 +1,4 @@
- body {
+body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -6,58 +6,44 @@
         header {
             background-color: #f3a2be;
             color: #444;
-            padding: 10px 20px;
-        }
-        .header-container, .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo img {
-            height: 50px;
-        }
-        .main-navigation ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        .main-navigation ul li {
+            padding: 10px 0;
+            text-align: center;
             position: relative;
-            margin: 0 15px;
-        }
-        .main-navigation ul li a {
-            color: #444;
-            text-decoration: none;
-        }
-        .main-navigation ul li ul {
-            display: none;
-            position: absolute;
-            background-color: #444;
-            list-style: none;
-            padding: 10px;
-            margin: 0;
-            top: 100%;
-        }
-        .main-navigation ul li:hover ul {
-            display: block;
-        }
-        .main-navigation ul li ul li {
-            margin: 0;
-        }
-        .main-navigation ul li ul li a {
-            color: #ffefef;
         }
         .back-button {
-            color: #fff;
-            text-decoration: none;
-            background-color: #444;
+            position: absolute;
+            left: 25px;
+            top: 75px;
             padding: 5px 10px;
-            border-radius: 3px;
+            background-color: #444;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
         }
         .back-button:hover {
             background-color: #f682ab;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #444;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #f682ab;
+            color: #444;
         }
         .dropdown-content {
             display: none;
@@ -76,22 +62,14 @@
             display: block;
         }
         .dropdown-content a:hover {
-            background-color: #aca4a4;
+            background-color: #555;
         }
-        .content {
+        .container {
             padding: 20px;
         }
-        .book-exhibition {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .book {
-            width: 150px;
+        h1 {
             text-align: center;
         }
-        .book img {
-            width: 100%;
-            height: auto;
+        p {
+            text-align: justify;
         }
-        
