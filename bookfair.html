@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pameran Buku</title>
+    <style type="text/css">
+        body {
+            background: rgb(247,202,201);
+            background: linear-gradient(90deg, rgba(247,202,201,1) 24%, rgba(145,168,208,1) 100%);
+            font-family: cambria;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #444;
+            width: 50%;
+        }
+        .modal h2 {
+            margin-top: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="css modul 5.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Logo Perpustakaan">
+                </a>
+            </div>
+            <div class="library-name">
+                <h1>Perpustakaan SAKURA</h1>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="bismillah fix.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="bookfair.html" class="active">Pameran Buku</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Modul Lain</a>
+                        <div class="dropdown-content">
+                            <a href="MODUL 1.html">Modul 1</a>
+                            <a href="Modul 2 (formulir).html">Modul 2</a>
+                            <a href="MODUL 3.html">Modul 3</a>
+                            <a href="MODUL 4.html">Modul 4</a>
+                            <a href="js.html">Modul 5</a>
+                        </div>
+                    </li>
+                    <li><a href="biodata.html">Tentang Saya</a></li>
+                </ul>
+            </nav>
+            <a href="javascript:history.back()" class="back-button">Kembali</a>
+        </div>
+    </header>
+
+    <h1 style="color: #444; text-align: center;">Selamat Datang di Pameran Buku Perpustakaan Sakura</h1>
+
+    <div class="library">
+        <div class="pos">
+            <div class="card" onclick="showDetails('Sinopsis: Di akhir masa kolonial, seorang perempuan dipaksa menjadi pelacur. Kehidupan itu terus dijalaninya hingga ia memiliki tiga anak gadis yang kesemuanya cantik. Ketika mengandung anaknya yang keempat, ia berharap anak itu akan lahir buruk rupa. Itulah yang terjadi, meskipun secara ironik ia memberinya nama si Cantik')">
+                <div class="card-image">
+                    <img src="cover1.jpg" alt="Judul Buku">
+                </div>
+                <div class="card-details">
+                    <h3 class="book-title">Cantik Itu Luka</h3>
+                    <p class="book-details">Penulis : Eka Kurniawan</p>
+                    <p class="book-details">No. Klasifikasi : 899.221</p>
+                    <p class="book-details">Keterangan : 505 halaman ; 21 cm</p>
+                    <p class="book-details">ISBN : 978-602-03-1258-3</p>
+                </div>
+                <div class="button">
+                    <button class="btn">Pinjam</button>
+                    <button class="btn">Detail</button>
+                </div>
+            </div>
+            <div class="card" onclick="showDetails('Sinopsis: Roman Tetralogi Buru mengambil latar belakang dan cikal bakal nation Indonesia di awal abad ke-20. Dengan membacanya waktu kita dibalikkan sedemikian rupa dan hidup di era membibitnya pergerakan nasional mula-mula, juga pertautan rasa, kegamangan jiwa, percintaan, dan pertarungan kekuatan anonim para srikandi yang mengawal penyemaian bangunan nasional yang kemudian kelak melahirkan Indonesia modern. Roman bagian pertama; Bumi Manusia, sebagai periode penyemaian dan kegelisahan dimana Minke sebagai aktor sekaligus kreator adalah manusia berdarah priyayi yang semampu mungkin keluar dari kepompong kejawaannya menuju manusia yang bebas dan merdeka, di sudut lain membelah jiwa ke-Eropa-an yang menjadi simbol dan kiblat dari ketinggian pengetahuan dan peradaban. Pram menggambarkan sebuah adegan antara Minke dengan ayahnya yang sangat sentimentil: Aku mengangkat sembah sebagaimana biasa aku lihat dilakukan punggawa terhadap kakekku dan nenekku dan orangtuaku, waktu lebaran. Dan yang sekarang tak juga kuturunkan sebelum Bupati itu duduk enak di tempatnya. Dalam mengangkat sembah serasa hilang seluruh ilmu dan pengetahuan yang kupelajari tahun demi tahun belakangan ini. Hilang indahnya dunia sebagaimana dijanjikan oleh kemajuan ilmu .... Sembah pengagungan pada leluhur dan pembesar melalui perendahan dan penghinaan diri! Sampai sedatar tanah kalau mungkin! Uh, anak-cucuku tak kurelakan menjalani kehinaan ini. Aku mengatakan pada ibuku bahwa kita kalah. Namun, ibu mengatakan: Kita telah melawan, Nak, Nyo, sebaik-baiknya, sehormat-hormatnya.')">
+                <div class="card-image">
+                    <img src="cover2.jpg" alt="Judul Buku">
+                </div>
+                <div class="card-details">
+                    <h3 class="book-title">Bumi Manusia</h3>
+                    <p class="book-details">Penulis : Pramoedya Ananta Toer</p>
+                    <p class="book-details">No. Klasifikasi : 808.83</p>
+                    <p class="book-details">Keterangan : 353 hlm. 20 cm.</p>
+                    <p class="book-details">ISBN : -</p>
+                </div>
+                <div class="button">
+                    <button class="btn">Pinjam</button>
+                    <button class="btn">Detail</button>
+                </div>
+            </div>
+            <div class="card" onclick="showDetails('Sinopsis: Setelah puluhan tahun kau menunggu, kini kau telah berjalan ke surga. Ketika hampir tiba, ketika kutanyakan kenapa surga diciptakan, kau hanya bisa diam. Untuk apa kau berjalan? Kau juga tidak tahu. Dasar manusia! Kau hidup hanya untuk mati? Jika seperti itu, betapa kasihan kau, saya dan leluhur kau yang lain, tentu sangat kecewa. Tak pantas kau berjalan ke tempat suci ini--tak pantas kau menjadi orang Toraja yang kami banggakan. Pulanglah, pulanglah dulu, tanyakan kepada kawa kau yang lain, tanyakan kepada semua orang: Kenapa surga diciptakan?')">
+                <div class="card-image">
+                    <img src="cover3.jpg" alt="Judul Buku">
+                </div>
+                <div class="card-details">
+                    <h3 class="book-title">Puya ke Puya</h3>
+                    <p class="book-details">Penulis : Faisal Oddang</p>
+                    <p class="book-details">No. Klasifikasi : 813</p>
+                    <p class="book-details">Keterangan : 218 hlm.;13.5x20 cm</p>
+                    <p class="book-details">ISBN : 978-979-91-0950-7</p>
+                </div>
+                <div class="button">
+                    <button class="btn">Pinjam</button>
+                    <button class="btn">Detail</button>
+                </div>
+            </div>
+            <div class="card" onclick="showDetails('Pak Raja sekarat. Dalam menanti ajal, ia memanggil satu nama perempuan yang bukan istrinya; Jeng Yah. Tiga anaknya, pewaris Kretek Djagad Raja, dimakan gundah. Sang Ibu pun terbakar cemburu terlebih karena permintaan terakhir suaminya ingin bertemu Jeng Yah. Maka berpacu dengan malaikat maut, Lebas, Karim, dan Tegar, pergi ke pelosok Jawa untuk mencari Jeng Yah, sebelum ajal menjemput sang Ayah. Perjalanan itu bagai napak tilas bisnis dan rahasia keluarga. Lebas, Karim dan Tegar bertemu dengan buruh bathil (pelinting) tua dan menguak asal-usul Kretek Djagad Raja hingga menjadi kretek nomor 1 di Indonesia. Lebih dari itu, ketiganya juga mengetahui kisah cinta ayah mereka dengan Jeng Yah, yang ternyata adalah pemilik Kretek Gadis, kretek lokal Kota M yang terkenal pada zamannya. Apakah Lebas, Karim dan Tegar akhirnya berhasil menemukan Jeng Yah? Gadis Kretek tidak sekadar bercerita tentang cinta dan pencarian jati diri para tokohnya. Dengan latar Kota M, Kudus, Jakarta, dari periode penjajahan Belanda hingga kemerdekaan, Gadis Kretek akan membawa pembaca berkenalan dengan perkembangan industri kretek di Indonesia. Kaya akan wangi tembakau. Sarat dengan aroma cinta.')">
+                <div class="card-image">
+                    <img src="cover4.jfif" alt="Judul Buku">
+                </div>
+                <div class="card-details">
+                    <h3 class="book-title">Gadis Kretek</h3>
+                    <p class="book-details">Penulis : Ratih Kumala</p>
+                    <p class="book-details">No. Klasifikasi : 899.221 3</p>
+                    <p class="book-details">Keterangan : 274 hlm. ; 20 cm</p>
+                    <p class="book-details">ISBN : 978-979-22-8141-5</p>
+                </div>
+                <div class="button">
+                    <button class="btn">Pinjam</button>
+                    <button class="btn">Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="book-details-modal" class="modal">
+        <p id="modal-description">Description</p>
+        <button onclick="closeDetails()">Close</button>
+    </div>
+
+    <script>
+        function showDetails(description) {
+            document.getElementById('modal-description').innerText = description;
+            document.getElementById('book-details-modal').style.display = 'block';
+        }
+
+        function closeDetails() {
+            document.getElementById('book-details-modal').style.display = 'none';
+        }
+    </script>
+
+    <footer>
+        <style>
+            footer {
+                background-color: #f3a2be;
+                color: #444;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            footer nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 10px;
+            }
+
+            footer nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            footer nav ul li a {
+                color: #444;
+                text-decoration: none;
+            }
+
+            footer nav ul li a:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <center>
+        <p>&copy; 2024 Perpustakaan Sakura. All rights reserved.</p>
+        </center>
+    </footer>
+</body>
+</html>
