@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background: rgb(247,202,201);
+background: linear-gradient(90deg, rgba(247,202,201,1) 24%, rgba(145,168,208,1) 100%);
+    font-family: cambria;
+
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            padding: 10px;
+            width: 100%;
+            background-color: #f682ab;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .login-container button:hover {
+            background-color: #f15b90;
+        }
+        .back-button {
+            background-color: #f15b90;
+        }
+        .back-button:hover {
+            background-color: #f682ab;
+        }
+        .message {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form onsubmit="return handleLogin()">
+            <input type="text" id="username" placeholder="ID Number">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+        <button class="back-button" onclick="goBack()">Cancel</button>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        function handleLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const messageDiv = document.getElementById('message');
+
+            messageDiv.textContent = '';
+
+            if (!username || !password) {
+                messageDiv.textContent = 'Input tidak lengkap. Silakan isi semua kolom.';
+                messageDiv.style.color = 'orange';
+                return false;
+            }
+
+            const correctUsername = '210709009';
+            const correctPassword = 'usu';
+
+            if (username === correctUsername && password === correctPassword) {
+                messageDiv.textContent = 'Login sukses!';
+                messageDiv.style.color = 'green';
+              
+                setTimeout(() => {
+                    window.location.href = 'bookfair.html';
+                }, 1000); 
+                return false;
+            } else {
+                messageDiv.textContent = 'Login gagal. ID atau Password salah.';
+                messageDiv.style.color = 'red';
+                return false;
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

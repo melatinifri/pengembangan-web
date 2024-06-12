@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul 6</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        body {
+            background: rgb(247,202,201);
+            background: linear-gradient(90deg, rgba(247,202,201,1) 24%, rgba(145,168,208,1) 100%);
+            font-family: cambria;
+        }
+
+        #gbr {
+            position: relative;
+        }
+    </style>
+    <link rel="stylesheet" href="css modul 5.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Logo Perpustakaan">
+                </a>
+            </div>
+            <div class="library-name">
+                <h1>Perpustakaan Sakura</h1>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="bismillah fix.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="MODUL 6.html" class="avtive">Modul 6</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Modul Lain</a>
+                        <div class="dropdown-content">
+                            <a href="MODUL 1.html">Modul 1</a>
+                            <a href="Modul 2 (formulir).html">Modul 2</a>
+                            <a href="MODUL 3.html">Modul 3</a>
+                            <a href="MODUL 4.html">Modul 4</a>
+                            <a href="js.html">Modul 5</a>
+                            <a href="MODUL 7 (bilangan).html">Modul 7</a>
+                            <a href="MODUL 8.html">Modul 8</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="bookfair.html">Pameran Buku</a>
+                    </li>
+                    <li><a href="biodata.html">Tentang Saya</a></li>
+                </ul>
+            </nav>
+            <a href="javascript:history.back()" class="back-button">Kembali</a>
+        </div>
+    </header>
+
+    <center>
+        <h1 style="color: #f46a8d; font-family: Segoe Script;">Struktur dan Plugin jQuery</h1>
+    </center>
+
+    <div class="container">
+        <div class="content" id="content-left"> 
+            <h2>1. Manipulasi HTML DOM</h2>
+            <p id="q1">Apa Itu jQuery?</p>
+            <button id="btn">Answer</button>
+            
+            <h2>2. Efek dan Animasi</h2>
+            <button id="hilang">Hide</button>
+            <button id="muncul">Show</button>
+            <button id="toggle">Toggle</button>
+            <p id="paragraf">
+                Gambar di bawah bisa digeser.
+            </p>
+
+            <br>
+
+            <button id="move">Click</button>
+            <img id="gbr" src="pict6.png" width="300px">
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#q1").html("jQuery adalah suatu framework (library) dari Javascript berupa kumpulan kode/fungsi Javascript siap pakai. jQuery dapat menyederhanakan pemrograman Javascript sehingga jQuery memiliki slogan <b>write less, do more.</b>");
+            });
+            $('#hilang').click(function(){
+                $('#paragraf').fadeOut('slow');
+                $('#hilang').text('Hided');
+            });
+            $('#muncul').click(function(){
+                $('#paragraf').fadeIn('slow');
+            });
+            $('#toggle').click(function(){
+                $('#paragraf').fadeToggle('slow');
+            });
+            $('#move').click(function(){
+                $("#gbr").effect("bounce", { times: 3 }, "slow");
+            });
+
+            // Menjadikan gambar bisa digeser
+            $("#gbr").draggable();
+        });
+    </script>
+</body>
+<footer>
+    <style>
+        footer {
+            background-color: #f3a2be;
+            color: #444;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        footer nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        footer nav ul li a {
+            color: #444;
+            text-decoration: none;
+        }
+
+        footer nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <center>
+        <p>&copy; 2024 Perpustakaan Sakura. All rights reserved.</p>
+    </center>
+</footer>
+</html>
