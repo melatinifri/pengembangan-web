@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>database</title>
+    <style>
+      body {
+    background: rgb(247,202,201);
+background: linear-gradient(90deg, rgba(247,202,201,1) 24%, rgba(145,168,208,1) 100%);
+    font-family: cambria;
+}
+    </style>
+    <link rel="stylesheet" href="css modul 8.css">
+  </head>
+  <body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Logo Perpustakaan">
+                </a>
+            </div>
+            <div class="library-name">
+                <h1>Perpustakaan Sakura</h1>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="MODUL 7 (bilangan).html" class="avtive">Modul 8</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Modul Lain</a>
+                        <div class="dropdown-content">
+                            <a href="MODUL 1.html">Modul 1</a>
+                            <a href="Modul 2 (formulir).html">Modul 2</a>
+                            <a href="MODUL 3.html">Modul 3</a>
+                            <a href="MODUL 4.html">Modul 4</a>
+                            <a href="js.html">Modul 5</a>
+                            <a href="MODUL 6.html">Modul 6</a>
+                            <a href="MODUL 7 (bilangan).html">Modul 7</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="bookfair.html">Pameran Buku</a>
+                    </li>
+                    <li><a href="biodata.html">Tentang Saya</a></li>
+                </ul>
+            </nav>
+            <a href="javascript:history.back()" class="back-button">Kembali</a>
+        </div>
+    </header>
+    <h1 style="color: #02509f; text-align: center;">DATABASE PERPUSTAKAAN </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>JUDUL</th>
+          <th>PENULIS</th>
+          <th>TAHUN</th>
+          <th>Nomor Panggil</th>
+          <th>EDIT</th>
+        </tr>
+      </thead>
+      <tbody id="libraryBody">
+        
+      </tbody>
+    </table>
+
+    <form id="libraryForm">
+      <input type="hidden" id="editIndex" />
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="text" id="author" placeholder="Author" required />
+      <input type="number" id="year" placeholder="Year" required />
+      <input type="text" id="nomorpanggil" placeholder="Nomor Panggil" required />
+      <button type="button" onclick="addOrUpdateBook()">
+        Tambah/Perbaharui
+      </button>
+    </form>
+
+    <script>
+      let libraryData = [
+        {
+          title: "Aroma Karsa",
+          author: "Dee Lestari",
+          year: 2018,
+          nomorpanggil: "889.221 3 DEE a",
+        },
+        {
+          title: "San Francisco",
+          author: "Ziggy Zezsyazeoviennazabrizkie",
+          year: 2016,
+          nomorpanggil: "813 ZIG s",
+        },
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        displayLibrary();
+      });
+
+      function displayLibrary() {
+        const tbody = document.getElementById("libraryBody");
+        tbody.innerHTML = "";
+        libraryData.forEach((book, index) => {
+          const row = tbody.insertRow();
+          row.innerHTML = `
+            <td>${book.title}</td>
+            <td>${book.author}</td>
+            <td>${book.year}</td>
+            <td>${book.nomorpanggil}</td>
+            <td>
+                <button onclick="editBook(${index})">Edit</button>
+                <button onclick="deleteBook(${index})">Hapus</button>
+            </td>
+        `;
+        });
+      }
+
+      function addOrUpdateBook() {
+        const title = document.getElementById("title").value;
+        const author = document.getElementById("author").value;
+        const year = document.getElementById("year").value;
+        const nomorpanggil = document.getElementById("nomorpanggil").value;
+        const editIndex = document.getElementById("editIndex").value;
+
+        const book = { title, author, year, nomorpanggil };
+
+        if (editIndex === "") {
+          libraryData.push(book);
+        } else {
+          libraryData[editIndex] = book;
+          document.getElementById("editIndex").value = "";
+        }
+
+        document.getElementById("libraryForm").reset();
+        displayLibrary();
+      }
+
+      function editBook(index) {
+        const book = libraryData[index];
+        document.getElementById("title").value = book.title;
+        document.getElementById("author").value = book.author;
+        document.getElementById("year").value = book.year;
+        document.getElementById("nomorpanggil").value = book.nomorpanggil;
+        document.getElementById("editIndex").value = index;
+      }
+
+      function deleteBook(index) {
+        libraryData.splice(index, 1);
+        displayLibrary();
+      }
+    </script>
+  </body>
+  <br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  <footer>
+      <style>
+          footer {
+              background-color: #f3a2be;
+              color: #444;
+              padding: 20px 0;
+              text-align: center;
+          }
+  
+          footer p {
+              margin: 0;
+              font-size: 14px;
+          }
+  
+          footer nav ul {
+              list-style-type: none;
+              padding: 0;
+              margin-top: 10px;
+          }
+  
+          footer nav ul li {
+              display: inline;
+              margin-right: 10px;
+          }
+  
+          footer nav ul li a {
+              color: #444;
+              text-decoration: none;
+          }
+  
+          footer nav ul li a:hover {
+              text-decoration: underline;
+          }
+      </style>
+  
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+      <center>
+      <p>&copy; 2024 Perpustakaan Sakura. All rights reserved.</p>
+      </center>
+  </footer>
+  
+  </html>
